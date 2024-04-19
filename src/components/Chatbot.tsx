@@ -11,17 +11,17 @@ export function Chatbot() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
-    <div className="h-96 w-full max-w-[700px] ">
-      <div className="flex flex-col h-full ">
+    <div className="h-96 w-full max-w-[700px]">
+      <div className="flex flex-col h-full">
         <div className="flex-grow rounded-lg border p-4">
           {messages.map((m, index) => (
-            <p className="whitespace-pre-line" key={index}>
+            <p className="mb-3" key={index}>
               {m.content}
             </p>
           ))}
         </div>
 
-        <div className="flex items-center p-2">
+        <div className="my-5">
           <form className="flex" onSubmit={handleSubmit}>
             <Input
               placeholder="Type your message here..."
